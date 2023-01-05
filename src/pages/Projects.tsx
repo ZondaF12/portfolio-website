@@ -15,7 +15,8 @@ function Projects() {
 
     const sortedDesc = await res.sort(
       (objA: any, objB: any) =>
-        new Date(objB["updated_at"]) - new Date(objA["updated_at"])
+        new Date(objB["updated_at"]).valueOf() -
+        new Date(objA["updated_at"]).valueOf()
     );
 
     setData(sortedDesc);
@@ -26,8 +27,8 @@ function Projects() {
   }, []);
 
   function getDate(IsoDate: string) {
-    let year = new Date(IsoDate).getFullYear();
-    let month: any = new Date(IsoDate).getMonth() + 1;
+    let year: number = new Date(IsoDate).getFullYear();
+    let month: string = (new Date(IsoDate).getMonth() + 1).toString();
 
     month = month.toString().padStart(2, "0");
 
@@ -36,7 +37,7 @@ function Projects() {
 
   return (
     <div className="bg-background-blue w-100 h-100">
-      <div className="py-20 px-10 xl:px-[34.5%] lg:px-[20%] space-y-12 text-[14px] font-SFMono font-normal divide-zinc-700 divide-y">
+      <div className="py-20 px-10 xl:px-[34.5%] lg:px-[20%] space-y-12 text-[14px] font-SFMono divide-zinc-700 divide-y">
         <h1 className="leading-7 font-SFMono font-semibold text-[16px] tracking-tight lg:tracking-wide text-text-highlight">
           <a className="text-text-main hover:text-text-header" href="/">
             ../

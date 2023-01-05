@@ -8,3 +8,18 @@
   src: url(../fonts/SFMonoRegular.otf);
   font-weight: 500;
 }
+
+@font-face {
+  font-family: "SFMono";
+  font-display: block;
+  src: url(../fonts/SFMonoRegularItalic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SFMono";
+  font-display: block;
+  src: url(../fonts/SFMonoSemibold.otf);
+  font-weight: 600;
+}
