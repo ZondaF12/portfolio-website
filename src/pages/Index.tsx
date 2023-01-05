@@ -2,7 +2,7 @@ import React from "react";
 
 function Index() {
   return (
-    <div className="lg:flex lg:h-screen lg:justify-center lg:items-center bg-background-blue font-SFMono">
+    <div className="flex h-screen justify-center items-center bg-background-blue font-SFMono">
       <header>
         <title>Ruaridh Bell</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,7 +13,7 @@ function Index() {
         />
         <meta content="https://ruaridhbell.com" property="og:url" />
       </header>
-      <div className="py-16 lg:py-0 px-10 xl:px-[30%] lg:px-[20%] space-y-4 text-[15px] lg:mb-[112px] text-text-main">
+      <div className="px-10 xl:px-[30%] lg:px-[20%] space-y-4 text-[15px] lg:mb-[112px] text-text-main">
         <img src="me.jpg" className="h-24 inline rounded-full" />
         <h2 className="leading-7 font-SFMono text-[15px] tracking-tight lg:tracking-wide text-text-highlight">
           Hi, my name is

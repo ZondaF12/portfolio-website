@@ -36,7 +36,7 @@ function Projects() {
   }
 
   return (
-    <div className="bg-background-blue w-100 h-100">
+    <div className="bg-background-blue h-screen">
       <div className="py-20 px-10 xl:px-[34.5%] lg:px-[20%] space-y-12 text-[14px] font-SFMono divide-zinc-700 divide-y">
         <h1 className="leading-7 font-SFMono font-semibold text-[16px] tracking-tight lg:tracking-wide text-text-highlight">
           <a className="text-text-main hover:text-text-header" href="/">
