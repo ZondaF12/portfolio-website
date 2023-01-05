@@ -13,8 +13,6 @@ function Projects() {
         res = data;
       });
 
-    console.log(data);
-
     const sortedDesc = await res.sort(
       (objA: any, objB: any) =>
         new Date(objB["updated_at"]) - new Date(objA["updated_at"])
@@ -29,21 +27,23 @@ function Projects() {
 
   function getDate(IsoDate: string) {
     let year = new Date(IsoDate).getFullYear();
-    let month = new Date(IsoDate).getMonth().toString().padStart(2, "0");
+    let month: any = new Date(IsoDate).getMonth() + 1;
+
+    month = month.toString().padStart(2, "0");
 
     return `${month} / ${year}`;
   }
 
   return (
-    <div className="bg-background-blue w-screen h-screen">
+    <div className="bg-background-blue w-100 h-100">
       <div className="py-20 px-10 xl:px-[34.5%] lg:px-[20%] space-y-12 text-[14px] font-SFMono font-normal divide-zinc-700 divide-y">
-        <h1 className="leading-7 font-SFMono font-semibold text-[16px] tracking-tight lg:tracking-wide lg:mt-20 text-text-highlight">
-          <a className="text-gray-500 hover:text-neutral-600" href="/">
+        <h1 className="leading-7 font-SFMono font-semibold text-[16px] tracking-tight lg:tracking-wide text-text-highlight">
+          <a className="text-text-main hover:text-text-header" href="/">
             ../
           </a>{" "}
           Projects
         </h1>
-        <div className="divide-y divide-zinc-700 text-gray-500">
+        <div className="divide-y divide-zinc-700 text-text-main">
           {data.map((project) =>
             data.length < 1 ? (
               <div className="py-3">No projects found</div>
@@ -55,7 +55,7 @@ function Projects() {
                   </span>
                   <div className="flex flex-row justify-between ml-[18%]">
                     <a
-                      className="text-[#E5E5E5] hover:text-gray-500 truncate font-SFMono"
+                      className="text-text-header hover:text-text-highlight truncate font-SFMono"
                       href={project["html_url"]}
                     >
                       {project["name"]}
