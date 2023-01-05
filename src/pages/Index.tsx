@@ -21,7 +21,7 @@ function Index() {
         <p className="font-newsreader italic font-normal text-[17px]">
           Constructing the future of the web.{" "}
           <span className="font-SFMono not-italic font-normal leading-7 text-[15px]">
-            Entrepreneur & fullstack developer. Always learning and improving.
+            Self taught Software Engineer. Always learning and improving.
           </span>
         </p>
         <p className="font-SFMono font-normal leading-7 decoration-gray-500 decoration-2 underline-offset-2">
