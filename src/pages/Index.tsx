@@ -41,7 +41,8 @@ function Index() {
           Some personal projects i've made to keep myself busy can be found{" "}
           <a href="/projects" className="underline">
             here
-          </a>{" "}
+          </a>
+          .{" "}
         </p>
         <p className="font-SFMono leading-7 decoration-gray-500 decoration-2 underline-offset-2">
           Reach me at{" "}
@@ -59,7 +60,8 @@ function Index() {
             target={"_blank"}
           >
             hi@ruaridhbell.com
-          </a>{" "}
+          </a>
+          .{" "}
         </p>
         <p className="font-SFMono italic text-[17px] text-text-header">
           "Innovation distinguishes between a leader and a follower"{" "}
