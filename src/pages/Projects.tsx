@@ -52,7 +52,11 @@ function Projects() {
               <div className="divide-y divide-zinc-700 text-gray-500 relative">
                 <div className="py-3">
                   <span className="absolute">
-                    {new Date(project["updated_at"]).getFullYear()}
+                    {project["language"] === "JavaScript"
+                      ? "JS"
+                      : project["language"] === "TypeScript"
+                      ? "TS"
+                      : project["language"]}
                   </span>
                   <div className="flex flex-row justify-between ml-[18%]">
                     <a
